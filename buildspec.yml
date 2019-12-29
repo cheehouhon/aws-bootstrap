@@ -10,8 +10,8 @@ phases:
       - npm ci
   build:
     commands:
-    - npm test
-    - npm run build
+      - npm test
+      - npm run build
 artifacts:
   files:
     - start-service.sh
