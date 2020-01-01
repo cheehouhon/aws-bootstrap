@@ -196,6 +196,8 @@ Resources:
           00-install-cd-agent: 
             command: "./install auto"
             cwd: "/home/ec2-user/"
+          01-cfg-signal:
+            command: "/opt/aws/bin/cfn-signal -e 0 --stack ${AWS::StackName} --region ${AWS::Region} --resource Instance"
     Properties:
       ImageId: !Ref EC2AMI
       InstanceType: !Ref EC2InstanceType
